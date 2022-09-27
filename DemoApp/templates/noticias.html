@@ -1,0 +1,32 @@
+{% extends 'layout.html'%} {% block title %}Noticas{% endblock %} 
+
+{% block content %}
+
+<h1 class="title">Listado de Noticias 2022</h1>
+{% if messages %} {% for message in messages %}
+<div class="message">{{message}}</div>
+{% endfor %} {% endif %}
+
+<div class="columns is-flex-wrap-wrap">
+  {% for noticia in noticias %}
+  <div class="column is-one-third">
+    <div class="card">
+      <figure class="image image image is-3by2">
+        <img src="{{noticia.image.url}}"/>
+      </figure>
+
+      <div class="card-content">
+        <div class="content">
+            <p class="title is-4">{{noticia.title}}</p>
+        </div>
+        <div class="content">
+          {{noticia.content}}
+          <br />
+          <time datetime="2016-1-1">{{noticia.created_at}}</time>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
