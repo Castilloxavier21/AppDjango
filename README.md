@@ -1,4 +1,4 @@
 # Proyecto_Django
 Proyecto Final
 Clonar repositorio
-gh repo clone Castilloxavier21/AppDjango
+git clone https://github.com/Castilloxavier21/AppDjango.git
